@@ -1,0 +1,33 @@
+{
+  "name": "email-serverless",
+  "version": "1.0.0",
+  "description": "📨 Email Serverless Application",
+  "main": "index.js",
+  "scripts": {
+    "debug": "sam local invoke BounceFunction -e event.json",
+    "build": "tsc src/index.ts --outDir=built",
+    "watch": "node develop/setup.js && webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "email-serverless"
+  },
+  "author": "Ryosuke Hashimoto <is0024xx@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.33",
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^12.11.7",
+    "awesome-typescript-loader": "^5.2.1",
+    "aws-sdk": "^2.553.0",
+    "dotenv": "^8.2.0",
+    "serverless-plugin-typescript": "^1.1.9",
+    "ts-loader": "^6.2.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
+}

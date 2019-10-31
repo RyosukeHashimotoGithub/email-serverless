@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "amd",
+    "sourceMap": true,
+    "outFile": "./built/index.js",
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost",
+      "es2015.promise"
+    ],
+    "moduleResolution": "node"
+  },
+  "files": [
+    "node_modules/aws-sdk/index.d.ts",
+  ]
+}

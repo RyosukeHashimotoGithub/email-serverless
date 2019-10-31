@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: "AWS::Serverless-2016-10-31"
+Description: SQS queue with Lambda
+Resources:
+  BounceFunction:
+    Type: "AWS::Serverless::Function"
+    Properties:
+      Runtime: nodejs10.x
+      Handler: index.handler
+      CodeUri: ./built
+      Events:
+        BounceEvent:
+          Type: SQS
+          Properties:
+            Queue: !GetAtt SESBounceSQS.Arn
+            BatchSize: 10
+            Enabled: true
+
+  SESBounceSQS:
+    Type: AWS::SQS::Queue
