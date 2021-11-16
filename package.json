@@ -21,7 +21,7 @@
     "@types/dotenv": "^8.2.0",
     "@types/node": "^12.11.7",
     "awesome-typescript-loader": "^5.2.1",
-    "aws-sdk": "^2.553.0",
+    "aws-sdk": "^2.814.0",
     "dotenv": "^8.2.0",
     "serverless-plugin-typescript": "^1.1.9",
     "ts-loader": "^6.2.0",
